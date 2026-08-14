@@ -1,4 +1,8 @@
+package heap;
+
+import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.List;
 import java.util.PriorityQueue;
 
 public class Leetcode2462 {
@@ -7,7 +11,8 @@ public class Leetcode2462 {
         Comparator<Pair> comparator = this::compare;
         PriorityQueue<Pair> left = new PriorityQueue<>(comparator);
         PriorityQueue<Pair> right = new PriorityQueue<>(comparator);
-
+        PriorityQueue<Integer> c = new PriorityQueue<>(Integer::compare);
+        List<Integer> a = new ArrayList<>();
         int n = costs.length;
         int l = 0;
         int r = n - 1;
